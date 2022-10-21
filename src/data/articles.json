@@ -127,8 +127,8 @@
                                 "text": "Die Freiheit der Person ist unverletzlich.",
                                 "rights": [
                                     {
-                                        "name": "Recht auf Leben und Körperliche Unversehrheit",
-                                        "winnerSentence": "Man darf niemanden schlagen, verletzen, erniedrigen, foltern oder töten, unabhängig von Geschlecht und Herkunft.",
+                                        "name": "Recht auf Freiheit der Person",
+                                        "winnerSentence": "Niemand darf dich gegen deinen Willen festhalten oder dir deine Freiheit entziehen.",
                                         "alternativeSentences": ["dummy1", "dummy2"]
                                     }
                                 ]
