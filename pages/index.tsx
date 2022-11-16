@@ -20,6 +20,12 @@ export default function Home({ articles }: { articles: Article[] }) {
     console.log("Articles: ", articles)
   }, [])
 
+  const onClick = () => {
+    fetch("http://localhost:3000/api/migrate").then((res) => {
+      console.log("Success:", res)
+    })
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -37,6 +43,8 @@ export default function Home({ articles }: { articles: Article[] }) {
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
+
+        <button onClick={onClick}>Migrate</button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

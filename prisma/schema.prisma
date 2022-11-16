@@ -11,37 +11,47 @@ datasource db {
 }
 
 model Article {
-  id Int @id
+  id        String      @id @default(uuid())
+  number    String      @unique
+  Paragraph Paragraph[]
 }
+
 model Paragraph {
-  id Int @id
-  text String
-  article Article @relation(fields: [articleId], references: [id])
-  articleId Int
+  id            String   @id @default(uuid())
+  text          String
+  number        Int
+  article       Article  @relation(fields: [articleNumber], references: [number])
+  articleNumber String
+  Phrase        Phrase[]
 }
+
 model Phrase {
-  id Int @id
-  text String
-  paragraph Paragraph @relation(fields: [paragraphId], references: [id])
-  paragraphId Int
+  id          String    @id @default(uuid())
+  text        String
+  number      Int
+  paragraph   Paragraph @relation(fields: [paragraphId], references: [id])
+  paragraphId String
+  Part        Part[]
 }
+
 model Part {
-  id Int @id
-  text String
+  id          String  @id @default(uuid())
+  text        String
   textAltered Boolean
-  phrase Phrase @relation(fields: [phraseId], references: [id])
-  phraseId Int
+  phrase      Phrase  @relation(fields: [phraseId], references: [id])
+  phraseId    String
 }
+
 model Right {
-  id Int @id
-  text String
-  part Part @relation(fields: [partId], references: [id])
-  partId Int
+  id       String     @id @default(uuid())
+  text     String
+  Sentence Sentence[]
 }
+
 model Sentence {
-  id Int @id
-  text String
+  id       String  @id @default(uuid())
+  text     String
   isWinner Boolean
-  right Right @relation(fields: [rightId], references: [id])
-  rightId Int
+  right    Right   @relation(fields: [rightId], references: [id])
+  rightId  String
 }

@@ -1,5 +1,9 @@
 import { PrismaClient } from "@prisma/client"
 
-const db = new PrismaClient()
+let db = null as unknown as PrismaClient
+
+if (!db) {
+  db = new PrismaClient()
+}
 
 export default db
