@@ -26,26 +26,27 @@ model Paragraph {
 }
 
 model Phrase {
-  id          String    @id @default(uuid())
+  id          String        @id @default(uuid())
   text        String
   number      Int
-  paragraph   Paragraph @relation(fields: [paragraphId], references: [id])
+  paragraph   Paragraph     @relation(fields: [paragraphId], references: [id])
   paragraphId String
-  Part        Part[]
+  PhraseRight PhraseRight[]
 }
 
-model Part {
-  id          String  @id @default(uuid())
-  text        String
-  textAltered Boolean
-  phrase      Phrase  @relation(fields: [phraseId], references: [id])
-  phraseId    String
+model PhraseRight {
+  id       String @id @default(uuid())
+  phrase   Phrase @relation(fields: [phraseId], references: [id])
+  phraseId String
+  right    Right  @relation(fields: [rightId], references: [id])
+  rightId  String
 }
 
 model Right {
-  id       String     @id @default(uuid())
-  text     String
-  Sentence Sentence[]
+  id          String        @id @default(uuid())
+  text        String
+  Sentence    Sentence[]
+  PhraseRight PhraseRight[]
 }
 
 model Sentence {
