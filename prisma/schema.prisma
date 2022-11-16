@@ -13,3 +13,35 @@ datasource db {
 model Article {
   id Int @id
 }
+model Paragraph {
+  id Int @id
+  text String
+  article Article @relation(fields: [articleId], references: [id])
+  articleId Int
+}
+model Phrase {
+  id Int @id
+  text String
+  paragraph Paragraph @relation(fields: [paragraphId], references: [id])
+  paragraphId Int
+}
+model Part {
+  id Int @id
+  text String
+  textAltered Boolean
+  phrase Phrase @relation(fields: [phraseId], references: [id])
+  phraseId Int
+}
+model Right {
+  id Int @id
+  text String
+  part Part @relation(fields: [partId], references: [id])
+  partId Int
+}
+model Sentence {
+  id Int @id
+  text String
+  isWinner Boolean
+  right Right @relation(fields: [rightId], references: [id])
+  rightId Int
+}
