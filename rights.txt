@@ -1,44 +1,44 @@
-Grundrecht
-Allgemeine Handlungsfreiheit 
-Allgemeines Persönlichkeitsrecht (APR)
-Recht am eigenen Wort
-Recht am eigenen Bild
-Recht am eigenen Namen
-Schutz der persönlichen Ehre
-Sexuelle Selbstbestimmung
-Recht auf informationelle Selbstbestimmung
-Recht auf Integrität und Vertraulichkeit informationstechnischer Systeme
-Recht auf Leben und Körperliche Unversehrtheit
-Recht auf Freiheit der Person
-Allgemeiner Gleichheitssatz
-Geschlechtergleichberechtigung
-Besondere Diskriminierungsverbote (Abstammung, Rasse, Sprache, Heimat, Herkunft)
-Verbot der Benachteiligung von Behinderten
-Religions- und Weltanschauungsfreiheit
-Gewissensfreiheit
-Meinungsfreiheit
-Informationsfreiheit 
-Pressefreiheit
-Rundfunkfreiheit
-Filmfreiheit
-Kunstfreiheit
-Wissenschaftsfreiheit 
-Schutz der Ehe und Familie
-Elternrecht
-Soziale Rechte der Mutter
-Soziale Rechte des nichtehelichen Kindes
-Privatschulfreiheit
-Versammlungsfreiheit
-Vereinigungsfreiheit
-Koalitionsfreiheit
-Schutz der übermittelten Kommunikation (Brief-, Post-, Fernmeldegeheimnis)
-Freizügigkeit (Recht auf räumliche Selbstbestimmung)
-Berufsfreiheit
-Recht auf Unverletzlichkeit der Wohnung
-Recht auf Eigentum
-Schutz vor Ausbürgerung
-Asylrecht
-Schutz vor Auslieferung
-Petitionsrecht
-Recht auf effektiven Rechtsschutz
-Schutz der natürlichen Lebensgrundlagen und Tiere (jetziger und zukünftiger Generationen)
+Garantie der Menschenwürde|Art 1 I GG
+Allgemeine Handlungsfreiheit|Art 2 I GG
+Allgemeines Persönlichkeitsrecht (APR)|Art 2 I, 1 I GG
+Recht am eigenen Wort|Art 2 I, 1 I GG
+Recht am eigenen Bild|Art 2 I, 1 I GG
+Recht am eigenen Namen|Art 2 I, 1 I GG
+Schutz der persönlichen Ehre|Art 2 I, 1 I GG
+Sexuelle Selbstbestimmung|Art 2 I, 1 I GG
+Recht auf informationelle Selbstbestimmung|Art 2 I, 1 I GG
+Recht auf Integrität und Vertraulichkeit informationstechnischer Systeme|Art 2 I, 1 I GG
+Recht auf Leben und Körperliche Unversehrtheit|Art 2 II 1 GG
+Recht auf Freiheit der Person|Art 2 II 2 GG iVm Art 104 GG
+Allgemeiner Gleichheitssatz|Art 3 I GG
+Geschlechtergleichberechtigung|Art 3 II GG
+Besondere Diskriminierungsverbote (Abstammung, Rasse, Sprache, Heimat, Herkunft)|Art 3 III 1 GG
+Verbot der Benachteiligung von Behinderten|Art 3 III 2 GG
+Religions- und Weltanschauungsfreiheit|Art 4 I, II GG
+Gewissensfreiheit|Art 5 I 1 1. Alt GG
+Meinungsfreiheit|Art 5 I 1 2. Alt GG
+Informationsfreiheit|Art 5 I 1 2. Alt GG
+Pressefreiheit|Art 5 I 2 1. Alt GG
+Rundfunkfreiheit|Art 5 I 2 2. Alt GG
+Filmfreiheit|Art 5 I 2 3. Alt GG
+Kunstfreiheit|Art 5 III 1 1. Alt GG
+Wissenschaftsfreiheit|Art 5 III 1 2. Alt GG
+Schutz der Ehe und Familie|Art 6 I GG
+Elternrecht|Art 6 II GG
+Soziale Rechte der Mutter|Art 6 IV GG
+Soziale Rechte des nichtehelichen Kindes|Art 6 V GG
+Privatschulfreiheit|Art 7 IV GG
+Versammlungsfreiheit|Art 8 I GG
+Vereinigungsfreiheit|Art 9 I GG
+Koalitionsfreiheit|Art 9 III GG
+Schutz der übermittelten Kommunikation (Brief-, Post-, Fernmeldegeheimnis)|Art 10 I GG
+Freizügigkeit (Recht auf räumliche Selbstbestimmung)|Art 11 I GG
+Berufsfreiheit|Art 12 I GG
+Recht auf Unverletzlichkeit der Wohnung|Art 13 I GG
+Recht auf Eigentum|Art 14 I GG
+Schutz vor Ausbürgerung|Art 16 I GG
+Asylrecht|Art 16a I GG
+Schutz vor Auslieferung|Art 16 II GG
+Petitionsrecht|Art 17 GG
+Recht auf effektiven Rechtsschutz|Art 19 IV 1 GG
+Schutz der natürlichen Lebensgrundlagen und Tiere (jetziger und zukünftiger Generationen)|Art 20a GG, Art 2 II 1 GG

@@ -1,22 +1,91 @@
 import db from "@/lib/db"
+import * as fs from "fs"
 
 export async function migrate() {
-  // Artikel,Paragraph,Phrase (0 = alle)
-  const phraseText = await db.phraseRight.findMany({
-    where: {
-      rightId: "95018715-81ea-4bc6-aa40-4b255d9305d1",
-    },
-  })
-  console.log(phraseText)
-
-  for (let phrase of phraseText) {
-    const p = await db.phrase.findUnique({
-      where: {
-        id: phrase.phraseId,
-      },
+  const data = fs.readFileSync(
+    "C:\\Programming\\grundgesaetze\\rights.txt",
+    "utf8"
+  )
+  console.log("Data:", data)
+  const lines = data.split("\r\n")
+  console.log(lines)
+  for await (let line of lines) {
+    const [rightName, path] = line.split("|")
+    const right = await db.right.findFirst({ where: { text: rightName } })
+    // const right = await db.right.update({ where: {  } })
+    if (!right) continue
+    await db.right.update({
+      where: { id: right.id },
+      data: { articlePath: path },
     })
-    console.log(p.text)
   }
+  // const data = fs.readFileSync(
+  //   "C:\\Programming\\grundgesaetze\\sentences.txt",
+  //   "utf8"
+  // )
+  //
+  // console.log("Data:", data.split("\r\n"))
+  // const arr = data.split("\r\n")
+  // const separators = []
+  //
+  // const rights = await db.right.findMany()
+  //
+  // for (let item of arr) {
+  //   if (item.startsWith("//")) {
+  //     separators.push(arr.indexOf(item))
+  //   }
+  // }
+  //
+  // console.log(separators)
+  // const groups = []
+  // for (let i = 0; i < separators.length; i++) {
+  //   const start = separators[i]
+  //   const end = separators[i + 1]
+  //   const items = arr.slice(start + 1, end)
+  //   groups.push({ right: arr[start].replace("//", "").trim(), items })
+  // }
+  // console.log(groups)
+  // console.log(rights)
+  //
+  // for await (let group of groups) {
+  //   const rightId = rights.find((r) => r.text === group.right)?.id
+  //
+  //   if (!rightId) {
+  //     console.log("Right not found:", group.right)
+  //     continue
+  //   }
+  //
+  //   const createdItems = []
+  //   for await (let item of group.items) {
+  //     if (createdItems.indexOf(item) > -1) continue
+  //     await db.sentence.create({
+  //       data: {
+  //         text: item.trim(),
+  //         rightId,
+  //         isWinner: group.items.indexOf(item) === 0,
+  //       },
+  //     })
+  //
+  //     createdItems.push(item)
+  //   }
+  // }
+
+  // Artikel,Paragraph,Phrase (0 = alle)
+  // const phraseText = await db.phraseRight.findMany({
+  //   where: {
+  //     rightId: "95018715-81ea-4bc6-aa40-4b255d9305d1",
+  //   },
+  // })
+  // console.log(phraseText)
+  //
+  // for (let phrase of phraseText) {
+  //   const p = await db.phrase.findUnique({
+  //     where: {
+  //       id: phrase.phraseId,
+  //     },
+  //   })
+  //   console.log(p.text)
+  // }
   // console.log("-------------------")
   // const rightsData = fs
   //   .readFileSync("C:\\Programming\\grundgesaetze\\rights.txt")

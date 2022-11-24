@@ -1,23 +1,46 @@
 import Head from "next/head"
 import Image from "next/image"
 import styles from "../styles/Home.module.css"
-import { Article } from "@prisma/client"
+import { Article, Sentence, Paragraph, Phrase, Right } from "@prisma/client"
 import { useEffect } from "react"
 
+const BASE_URL = process.env.BASE_URL
+
+interface FullSentence extends Sentence {
+  phrases: Phrase[]
+  paragraphs: Paragraph[]
+}
+
 export async function getStaticProps() {
-  const articles = await (
-    await fetch("http://localhost:3000/api/articles/get")
+  const articles = await (await fetch(`${BASE_URL}/api/articles/get`)).json()
+
+  const sentences = await (
+    await fetch(`${BASE_URL}/api/sentences/winner`)
   ).json()
+  console.log(sentences, "S")
+  const rights = await (await fetch(`${BASE_URL}/api/rights/get`)).json()
+  console.log(rights)
   return {
     props: {
-      articles: articles,
+      sentences,
+      articles,
+      rights,
     },
   }
 }
 
-export default function Home({ articles }: { articles: Article[] }) {
+export default function Home({
+  articles,
+  sentences,
+  rights,
+}: {
+  articles: Article[]
+  sentences: FullSentence[]
+  rights: Right[]
+}) {
   useEffect(() => {
     console.log("Articles: ", articles)
+    console.log("Sentences: ", sentences)
   }, [])
 
   const onClick = () => {
@@ -35,47 +58,22 @@ export default function Home({ articles }: { articles: Article[] }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <button onClick={onClick}>Migrate</button>
+        <h1 className={styles.title}>Grundgesätze</h1>
+        {/*<button onClick={onClick}>Migrate it!!</button>*/}
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          {sentences.map((sentence) => {
+            const right = rights.find((r) => r.id === sentence.rightId)
+            return (
+              <div className={styles.card}>
+                <strong>
+                  {right?.articlePath} - {right?.text}
+                </strong>
+                <div key={sentence.id}>{sentence.text}</div>
+                <br />
+              </div>
+            )
+          })}
         </div>
       </main>
 
