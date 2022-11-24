@@ -45,6 +45,7 @@ model PhraseRight {
 model Right {
   id          String        @id @default(uuid())
   text        String
+  articlePath String        @default("")
   Sentence    Sentence[]
   PhraseRight PhraseRight[]
 }
