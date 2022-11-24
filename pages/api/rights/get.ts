@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import { article } from "@/lib/index"
+import { right } from "@/lib/index"
 
 export default async function (req: NextApiRequest, res: NextApiResponse) {
-  const articles = await article.getAll()
-  res.status(200).json(articles ?? [])
+  const sentences = await right.getAll()
+  res.status(200).json(sentences ?? [])
 }
