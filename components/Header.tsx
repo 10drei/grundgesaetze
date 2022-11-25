@@ -8,7 +8,7 @@ import instagram from "../public/instagram.svg"
 function Header() {
   return (
     <div className={styles.Header}>
-      <Link className={styles.link} href={"https://studypilot.app"}>
+      <Link className={styles.link} href="https://10drei.org">
         Über das Projekt
       </Link>
       <Link href="https://www.instagram.com/grundgesaetze/" target="_blank">
