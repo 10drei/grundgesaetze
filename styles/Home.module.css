@@ -1,4 +1,101 @@
 .Hero {
     background: var(--background);
     min-height: 500px;
+    padding-bottom: 10rem;
 }
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.title {
+    margin-top: 4rem;
+    color: white;
+    font-size: 3.75rem;
+}
+
+.title span {
+    color: var(--primary);
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 15.25rem;
+    height: 0.625rem;
+    background: white;
+    bottom: 0;
+}
+
+.intro {
+    width: 90%;
+    color: #E8E8E8;
+    margin-top: 2rem;
+    font-size: 1.56rem;
+}
+
+/* Search */
+.searchInput {
+    font-size: 1.25rem;
+    width: 100%;
+
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+
+    padding: 0.8rem;
+    border-radius: 3px;
+    border: 3px solid white;
+    transition: border .3s ease;
+
+    color: var(--background);
+}
+
+.searchInput:focus {
+    outline: none;
+    border: 3px solid var(--primary);
+    transition: border .3s ease;
+}
+
+.searchBadges {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.searchBadges span + span {
+    margin-left: 1rem;
+}
+
+/* Winner sentences */
+.winnerSentences {
+    width: 1200px;
+    margin: 2rem auto;
+}
+
+.winnerSentences h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.winnerSentences h2:after {
+    content: "";
+    display: block;
+    width: 7.5rem;
+    height: 0.3rem;
+    background: var(--primary);
+    bottom: 0;
+    margin: 1rem auto 0 auto;
+}
+
+.winnerSentences .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.winnerSentences .grid div {
+    margin-top: 2.5rem;
+}
+
