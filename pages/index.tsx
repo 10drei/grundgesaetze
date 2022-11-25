@@ -3,8 +3,7 @@ import styles from "../styles/Home.module.css"
 import { Article, Sentence, Paragraph, Phrase, Right } from "@prisma/client"
 import { useEffect } from "react"
 import Header from "../components/Header"
-
-const BASE_URL = process.env.BASE_URL
+import { article, sentence, right } from "../lib/index"
 
 interface FullSentence extends Sentence {
   phrases: Phrase[]
@@ -12,14 +11,11 @@ interface FullSentence extends Sentence {
 }
 
 export async function getStaticProps() {
-  const articles = await (await fetch(`${BASE_URL}/api/articles/get`)).json()
+  const articles = await article.getAll()
+  console.log(articles)
 
-  const sentences = await (
-    await fetch(`${BASE_URL}/api/sentences/winner`)
-  ).json()
-  console.log(sentences, "S")
-  const rights = await (await fetch(`${BASE_URL}/api/rights/get`)).json()
-  console.log(rights)
+  const sentences = await sentence.getWinners()
+  const rights = await right.getAll()
   return {
     props: {
       sentences,
