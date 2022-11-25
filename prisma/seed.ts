@@ -6,7 +6,6 @@ export async function migrate() {
     "C:\\Programming\\grundgesaetze\\rights.txt",
     "utf8"
   )
-  console.log("Data:", data)
   const lines = data.split("\r\n")
   console.log(lines)
   for await (let line of lines) {

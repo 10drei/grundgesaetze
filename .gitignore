@@ -38,5 +38,5 @@ next-env.d.ts
 # IntelliJ
 .idea
 
-# Netlify
+# Local Netlify folder
 .netlify
