@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@prisma/client": "^4.6.1",
@@ -17,6 +18,7 @@
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "next": "13.0.3",
+    "next-on-netlify": "^3.0.1",
     "prisma": "^4.6.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
