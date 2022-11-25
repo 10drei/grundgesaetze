@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import { Article, Sentence, Paragraph, Phrase, Right } from "@prisma/client"
 import { useEffect } from "react"
@@ -42,7 +41,7 @@ export default function Home({
   useEffect(() => {
     console.log("Articles: ", articles)
     console.log("Sentences: ", sentences)
-  }, [])
+  }, [articles, sentences])
 
   const onClick = () => {
     fetch("http://localhost:3000/api/migrate").then((res) => {
@@ -70,7 +69,7 @@ export default function Home({
           {sentences.map((sentence) => {
             const right = rights.find((r) => r.id === sentence.rightId)
             return (
-              <div className={styles.card}>
+              <div key={sentence.id} className={styles.card}>
                 <strong>
                   {right?.articlePath} - {right?.text}
                 </strong>
