@@ -1,0 +1,4 @@
+.Hero {
+    background: var(--background);
+    min-height: 500px;
+}
