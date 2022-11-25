@@ -101,6 +101,7 @@ export default function Home({
             const right = rights.find((r) => r.id === sentence.rightId)
             return (
               <SentenceCard
+                key={sentence.id}
                 articlePath={right?.articlePath ?? ""}
                 sentenceText={sentence.text}
                 rightText={right?.text ?? ""}
