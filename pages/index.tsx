@@ -1,9 +1,11 @@
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import { Article, Sentence, Paragraph, Phrase, Right } from "@prisma/client"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Header from "../components/Header"
 import { article, sentence, right } from "../lib/index"
+import SearchBadge from "../components/SearchBadge"
+import SentenceCard from "../components/SentenceCard"
 
 interface FullSentence extends Sentence {
   phrases: Phrase[]
@@ -12,8 +14,6 @@ interface FullSentence extends Sentence {
 
 export async function getStaticProps() {
   const articles = await article.getAll()
-  console.log(articles)
-
   const sentences = await sentence.getWinners()
   const rights = await right.getAll()
   return {
@@ -34,16 +34,22 @@ export default function Home({
   sentences: FullSentence[]
   rights: Right[]
 }) {
+  const [search, setSearch] = useState("")
+
+  const searchBadges = [
+    "Artikel 1",
+    "Menschenwürde",
+    "Feminismus",
+    "Hautfarbe",
+    "Drogen",
+    "Freiheit",
+    "Krieg",
+  ]
+
   useEffect(() => {
     console.log("Articles: ", articles)
     console.log("Sentences: ", sentences)
   }, [articles, sentences])
-
-  const onClick = () => {
-    fetch("http://localhost:3000/api/migrate").then((res) => {
-      console.log("Success:", res)
-    })
-  }
 
   return (
     <div className={styles.container}>
@@ -54,24 +60,58 @@ export default function Home({
       </Head>
 
       <div className={styles.Hero}>
-        <Header />
+        <div className={styles.content}>
+          <Header />
+          <h1 className={styles.title}>
+            Grundge<span>SÄTZE</span>
+          </h1>
+          <p className={styles.intro}>
+            Im Rahmen des Demokratie-Projektes GrundgeSÄTZE haben über 500
+            Schülerinnen deutschlandweit unsere Grundrechte in eigenen Worten
+            formuliert.
+          </p>
+
+          <div className={styles.Search}>
+            <input
+              className={styles.searchInput}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              type="text"
+              placeholder="z.B. Menschenwürde"
+            />
+            <div className={styles.searchBadges}>
+              {searchBadges.map((text) => (
+                <SearchBadge
+                  key={text}
+                  text={text}
+                  active={text === search}
+                  onClick={() => setSearch(text)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Grundgesätze</h1>
+      <main className={styles.winnerSentences}>
         {/*<button onClick={onClick}>Migrate it!!</button>*/}
-
+        <h2>Alle Gewinner-Sätze</h2>
         <div className={styles.grid}>
           {sentences.map((sentence) => {
             const right = rights.find((r) => r.id === sentence.rightId)
             return (
-              <div key={sentence.id} className={styles.card}>
-                <strong>
-                  {right?.articlePath} - {right?.text}
-                </strong>
-                <div key={sentence.id}>{sentence.text}</div>
-                <br />
-              </div>
+              <SentenceCard
+                articlePath={right?.articlePath ?? ""}
+                sentenceText={sentence.text}
+                rightText={right?.text ?? ""}
+              />
+              // <div key={sentence.id} className={styles.card}>
+              //   <strong>
+              //     {right?.articlePath} - {right?.text}
+              //   </strong>
+              //   <div key={sentence.id}>{sentence.text}</div>
+              //   <br />
+              // </div>
             )
           })}
         </div>
