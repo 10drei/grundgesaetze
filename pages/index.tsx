@@ -83,7 +83,6 @@ export default function Home({
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
                   <SentenceCard
-                    style="light"
                     articlePath={
                       rights.find((r) => r.id === sentence.rightId)
                         ?.articlePath!
