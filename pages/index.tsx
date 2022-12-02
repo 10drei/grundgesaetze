@@ -40,7 +40,7 @@ export default function Home({
   useEffect(() => {
     console.log("This is the search: ", search)
     if (search.length > 3) {
-      fetch("/api/sentences/get")
+      fetch("/api/sentences/" + search)
         .then(async (res) => {
           console.log("Response:", res)
           const data = await res.json()

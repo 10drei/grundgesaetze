@@ -6,6 +6,6 @@ export default async function getSentences(
   res: NextApiResponse
 ) {
   // const sentences = await getAll()
-  const sentences = db.sentence.findMany()
+  const sentences = await db.sentence.findMany()
   res.status(200).json(sentences ?? [])
 }
