@@ -42,6 +42,7 @@
 .links {
     grid-column: 2;
     grid-row: 2;
+    margin-top: auto;
 }
 
 .links > a:first-child {
