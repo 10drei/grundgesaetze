@@ -1,10 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import { getAll } from "@/lib/models/sentence"
+import { sentence } from "@/lib/index"
 
 export default async function getSentences(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const sentences = await getAll()
+  const sentences = await sentence.getAll()
   res.status(200).json(sentences ?? [])
 }

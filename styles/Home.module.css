@@ -58,6 +58,18 @@
     transition: border .3s ease;
 }
 
+.searchedSentences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 4rem auto 0 auto;
+}
+
+.searchedSentences div {
+    margin-bottom: 2.5rem;
+}
+
 .searchBadges {
     display: flex;
     flex-wrap: wrap;
