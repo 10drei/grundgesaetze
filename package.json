@@ -17,6 +17,7 @@
     "classnames": "^2.3.2",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
+    "framer-motion": "^7.6.17",
     "next": "13.0.3",
     "next-on-netlify": "^3.0.1",
     "prisma": "^4.6.1",

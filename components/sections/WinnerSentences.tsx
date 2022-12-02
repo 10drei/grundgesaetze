@@ -16,6 +16,7 @@ function WinnerSentences({ sentences, rights }: Props) {
           const right = rights.find((r) => r.id === sentence.rightId)
           return (
             <SentenceCard
+              style="dark"
               key={sentence.id}
               articlePath={right?.articlePath ?? ""}
               sentenceText={sentence.text}
