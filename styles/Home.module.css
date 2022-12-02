@@ -112,12 +112,12 @@
 .Footer .image {
     position: absolute;
     left: -5rem;
-    top: 2rem;
+    bottom: -2rem;
     transform: scale(1.1);
 }
 
 .Footer .footerContent {
-    max-width: 60%;
+    max-width: 70%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
