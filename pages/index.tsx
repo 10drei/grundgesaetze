@@ -5,6 +5,8 @@ import Header from "../components/Header"
 import { sentence, right } from "../lib/index"
 import Search from "../components/sections/Search"
 import WinnerSentences from "../components/sections/WinnerSentences"
+import { useEffect, useState } from "react"
+import SentenceCard from "../components/SentenceCard"
 
 interface FullSentence extends Sentence {
   phrases: Phrase[]
@@ -14,6 +16,7 @@ interface FullSentence extends Sentence {
 export async function getStaticProps() {
   const sentences = await sentence.getWinners()
   const rights = await right.getAll()
+
   return {
     props: {
       sentences,
@@ -29,6 +32,19 @@ export default function Home({
   sentences: FullSentence[]
   rights: Right[]
 }) {
+  const [search, setSearch] = useState("")
+  const [searchedSentences, setSearchedSentences] = useState<FullSentence[]>([])
+
+  useEffect(() => {
+    console.log("This is the search: ", search)
+    if (search.length > 3) {
+      fetch("/api/sentences/" + search).then(async (res) => {
+        const data = await res.json()
+        setSearchedSentences(data)
+      })
+    }
+  }, [search])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -51,7 +67,18 @@ export default function Home({
             Schülerinnen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
-          <Search />
+          <Search search={search} setSearch={setSearch} />
+
+          {searchedSentences.length > 0 &&
+            searchedSentences.map((sentence) => (
+              <SentenceCard
+                articlePath={
+                  rights.find((r) => r.id === sentence.rightId)?.articlePath!
+                }
+                sentenceText={sentence.text}
+                rightText={rights.find((r) => r.id === sentence.rightId)?.text!}
+              />
+            ))}
         </div>
       </div>
 

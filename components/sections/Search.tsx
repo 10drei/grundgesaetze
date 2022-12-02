@@ -1,10 +1,12 @@
 import styles from "./Search.module.css"
 import SearchBadge from "../SearchBadge"
-import { useState } from "react"
 
-function Search() {
-  const [search, setSearch] = useState("")
+type Props = {
+  search: string
+  setSearch: (search: string) => void
+}
 
+function Search({ search, setSearch }: Props) {
   const searchBadges = [
     "Artikel 1",
     "Menschenwürde",
