@@ -112,3 +112,52 @@
     margin-top: 2.5rem;
 }
 
+.Footer {
+    background: var(--background);
+    padding: 3rem 0;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10rem;
+}
+
+.Footer .image {
+    position: absolute;
+    left: -5rem;
+    bottom: -2rem;
+    transform: scale(1.1);
+}
+
+.Footer .footerContent {
+    max-width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr fit-content(1fr);
+    padding: 0 2rem;
+    gap: 2rem 4rem;
+    font-size: 1.125rem;
+}
+
+.footerContent > div h3 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.aboutProject {
+    grid-column: 2;
+}
+
+.contactInformation a {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.links {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.links > a:first-child {
+    margin-right: 2.5rem;
+}
