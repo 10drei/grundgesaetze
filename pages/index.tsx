@@ -42,9 +42,7 @@ export default function Home({
     if (search.length > 3) {
       fetch("/api/sentences/" + search)
         .then(async (res) => {
-          console.log("Response:", res)
           const data = await res.json()
-          console.log("Data:", data)
           setSearchedSentences(data)
         })
         .catch((e) => {

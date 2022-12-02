@@ -1,11 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import db from "@/lib/db"
+import { sentence } from "@/lib/index"
 
 export default async function getSentences(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  // const sentences = await getAll()
-  const sentences = await db.sentence.findMany()
+  const sentences = await sentence.getAll()
   res.status(200).json(sentences ?? [])
 }
