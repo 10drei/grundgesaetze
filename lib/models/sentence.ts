@@ -11,3 +11,18 @@ export async function getWinners() {
     },
   })
 }
+
+export async function search(query: string) {
+  try {
+    return await db.sentence.findMany({
+      take: 10,
+      where: {
+        text: {
+          contains: query,
+        },
+      },
+    })
+  } catch (e) {
+    return e
+  }
+}

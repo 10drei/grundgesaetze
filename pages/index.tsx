@@ -5,6 +5,9 @@ import Header from "../components/Header"
 import { sentence, right } from "../lib/index"
 import Search from "../components/sections/Search"
 import WinnerSentences from "../components/sections/WinnerSentences"
+import { useEffect, useRef, useState } from "react"
+import SentenceCard from "../components/SentenceCard"
+import { motion } from "framer-motion"
 
 interface FullSentence extends Sentence {
   phrases: Phrase[]
@@ -14,6 +17,7 @@ interface FullSentence extends Sentence {
 export async function getStaticProps() {
   const sentences = await sentence.getWinners()
   const rights = await right.getAll()
+
   return {
     props: {
       sentences,
@@ -29,6 +33,26 @@ export default function Home({
   sentences: FullSentence[]
   rights: Right[]
 }) {
+  const [search, setSearch] = useState("")
+  const [searchedSentences, setSearchedSentences] = useState<FullSentence[]>([])
+  const searchedSentencesRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    console.log("This is the search: ", search)
+    if (search.length > 3) {
+      fetch("/api/sentences/" + search)
+        .then(async (res) => {
+          const data = await res.json()
+          setSearchedSentences(data)
+        })
+        .catch((e) => {
+          console.log("Error: ", e)
+        })
+    } else {
+      setSearchedSentences([])
+    }
+  }, [search])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -51,7 +75,30 @@ export default function Home({
             Schülerinnen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
-          <Search />
+          <Search search={search} setSearch={setSearch} />
+
+          <div className={styles.searchedSentences} ref={searchedSentencesRef}>
+            {searchedSentences.length > 0 &&
+              searchedSentences.map((sentence, index) => (
+                <motion.div
+                  key={sentence.id}
+                  animate={{ opacity: 1, translateY: 0 }}
+                  initial={{ opacity: 0, translateY: 150 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                >
+                  <SentenceCard
+                    articlePath={
+                      rights.find((r) => r.id === sentence.rightId)
+                        ?.articlePath!
+                    }
+                    sentenceText={sentence.text}
+                    rightText={
+                      rights.find((r) => r.id === sentence.rightId)?.text!
+                    }
+                  />
+                </motion.div>
+              ))}
+          </div>
         </div>
       </div>
 
