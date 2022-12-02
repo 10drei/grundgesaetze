@@ -1,10 +1,21 @@
 /* Search */
+
+.inputWrapper {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+}
+
 .searchInput {
     font-size: 1.25rem;
     width: 100%;
-
-    margin-top: 4rem;
-    margin-bottom: 1.5rem;
 
     padding: 0.8rem;
     border-radius: 3px;
