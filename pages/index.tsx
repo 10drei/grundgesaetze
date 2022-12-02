@@ -38,8 +38,11 @@ export default function Home({
   const [searchedSentences, setSearchedSentences] = useState<FullSentence[]>([])
   const searchedSentencesRef = useRef<HTMLDivElement>(null)
 
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     if (search.length > 3) {
+      setLoading(true)
       fetch("/api/sentences/" + search)
         .then(async (res) => {
           const data = await res.json()
@@ -47,6 +50,9 @@ export default function Home({
         })
         .catch((e) => {
           console.log("Error: ", e)
+        })
+        .finally(() => {
+          setLoading(false)
         })
     } else {
       setSearchedSentences([])
@@ -75,29 +81,34 @@ export default function Home({
             Schülerinnen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
-          <Search search={search} setSearch={setSearch} />
+          <Search loading={loading} search={search} setSearch={setSearch} />
 
           <div className={styles.searchedSentences} ref={searchedSentencesRef}>
-            {searchedSentences.length > 0 &&
-              searchedSentences.map((sentence, index) => (
-                <motion.div
-                  key={sentence.id}
-                  animate={{ opacity: 1, translateY: 0 }}
-                  initial={{ opacity: 0, translateY: 150 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                >
-                  <SentenceCard
-                    articlePath={
-                      rights.find((r) => r.id === sentence.rightId)
-                        ?.articlePath!
-                    }
-                    sentenceText={sentence.text}
-                    rightText={
-                      rights.find((r) => r.id === sentence.rightId)?.text!
-                    }
-                  />
-                </motion.div>
-              ))}
+            {searchedSentences.length > 0 && !loading
+              ? searchedSentences.map((sentence, index) => (
+                  <motion.div
+                    key={sentence.id}
+                    animate={{ opacity: 1, translateY: 0 }}
+                    initial={{ opacity: 0, translateY: 150 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                  >
+                    <SentenceCard
+                      articlePath={
+                        rights.find((r) => r.id === sentence.rightId)
+                          ?.articlePath!
+                      }
+                      sentenceText={sentence.text}
+                      rightText={
+                        rights.find((r) => r.id === sentence.rightId)?.text!
+                      }
+                    />
+                  </motion.div>
+                ))
+              : loading && (
+                  <div className={styles.loading}>
+                    {/*<h3>Wird geladen...</h3>*/}
+                  </div>
+                )}
           </div>
         </div>
       </div>

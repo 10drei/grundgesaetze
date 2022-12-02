@@ -1,12 +1,14 @@
 import styles from "./Search.module.css"
 import SearchBadge from "../SearchBadge"
+import Spinner from "../Spinner"
 
 type Props = {
   search: string
   setSearch: (search: string) => void
+  loading: boolean
 }
 
-function Search({ search, setSearch }: Props) {
+function Search({ search, setSearch, loading }: Props) {
   const searchBadges = [
     "Artikel 1",
     "Menschenwürde",
@@ -19,13 +21,17 @@ function Search({ search, setSearch }: Props) {
 
   return (
     <div className={styles.Search}>
-      <input
-        className={styles.searchInput}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        type="text"
-        placeholder="z.B. Menschenwürde"
-      />
+      <div className={styles.inputWrapper}>
+        <input
+          className={styles.searchInput}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          placeholder="z.B. Menschenwürde"
+        />
+        {loading && <Spinner className={styles.loader} />}
+      </div>
+
       <div className={styles.searchBadges}>
         {searchBadges.map((text) => (
           <SearchBadge
