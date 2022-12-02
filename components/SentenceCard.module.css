@@ -6,6 +6,7 @@
     border-radius: 3px;
     border: 2px solid white;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
 }
 
 .header {
