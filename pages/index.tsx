@@ -44,6 +44,7 @@ export default function Home({
         .then(async (res) => {
           console.log("Response:", res)
           const data = await res.json()
+          console.log("Data:", data)
           setSearchedSentences(data)
         })
         .catch((e) => {
