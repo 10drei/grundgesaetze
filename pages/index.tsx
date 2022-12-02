@@ -40,10 +40,15 @@ export default function Home({
   useEffect(() => {
     console.log("This is the search: ", search)
     if (search.length > 3) {
-      fetch("/api/sentences/" + search).then(async (res) => {
-        const data = await res.json()
-        setSearchedSentences(data)
-      })
+      fetch("/api/sentences/" + search)
+        .then(async (res) => {
+          console.log("Response:", res)
+          const data = await res.json()
+          setSearchedSentences(data)
+        })
+        .catch((e) => {
+          console.log("Error: ", e)
+        })
     } else {
       setSearchedSentences([])
     }
