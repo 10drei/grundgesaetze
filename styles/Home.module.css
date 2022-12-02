@@ -106,6 +106,7 @@
     color: white;
     overflow: hidden;
     position: relative;
+    margin-top: 10rem;
 }
 
 .Footer .image {
