@@ -1,4 +1,4 @@
-import styles from "./SentenceCard.module.css"
+import styles from "./SentenceCard.module.scss"
 
 type Props = {
   articlePath: string

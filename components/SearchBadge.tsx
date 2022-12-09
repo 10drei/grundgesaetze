@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from "react"
-import styles from "./SearchBadge.module.css"
+import styles from "./SearchBadge.module.scss"
 import classNames from "classnames"
 
 type Props = {

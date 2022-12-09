@@ -1,4 +1,4 @@
-import styles from "./Search.module.css"
+import styles from "./Search.module.scss"
 import SearchBadge from "../SearchBadge"
 import Spinner from "../Spinner"
 

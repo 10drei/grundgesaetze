@@ -126,3 +126,9 @@
 .loading {
     color: white;
 }
+
+@media (max-width: 800px) {
+    .Hero {
+        background: #FFD450;
+    }
+}
