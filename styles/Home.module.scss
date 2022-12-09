@@ -127,8 +127,8 @@
     color: white;
 }
 
-@media (max-width: 800px) {
-    .Hero {
-        background: #FFD450;
+@media (max-width: 1200px) {
+    .content {
+        width: 80%;
     }
 }

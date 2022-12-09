@@ -28,3 +28,9 @@ a:hover {
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 750px) {
+  :root {
+    font-size: 12px;
+  }
+}

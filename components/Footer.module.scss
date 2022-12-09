@@ -48,3 +48,41 @@
 .links > a:first-child {
     margin-right: 2.5rem;
 }
+
+@media (max-width: 1200px) {
+    .Footer .footerContent {
+        max-width: 90%;
+    }
+
+    .Footer .image {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Footer .footerContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr fit-content(1fr);
+        gap: 2rem 0;
+    }
+
+    .aboutProject {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .contactInformation {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .links {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .about {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}

@@ -1,7 +1,8 @@
 /* Winner sentences */
 .WinnerSentences {
-    width: 1200px;
+    max-width: 1200px;
     margin: 2rem auto;
+    padding: 0 2rem;
 }
 
 .WinnerSentences h2 {
@@ -23,11 +24,18 @@
 
 .WinnerSentences .grid {
     display: flex;
+    gap: 0 1rem;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .WinnerSentences .grid div {
     margin-top: 2.5rem;
+    max-width: 35rem;
 }
 
+@media (max-width: 1220px) {
+    .WinnerSentences .grid {
+        justify-content: center;
+    }
+}
