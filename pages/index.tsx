@@ -41,7 +41,7 @@ export default function Home({
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    if (search.length > 3) {
+    if (search.length >= 3) {
       setLoading(true)
       fetch("/api/sentences/" + search)
         .then(async (res) => {

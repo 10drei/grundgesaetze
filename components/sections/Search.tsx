@@ -1,6 +1,7 @@
 import styles from "./Search.module.scss"
 import SearchBadge from "../SearchBadge"
 import Spinner from "../Spinner"
+import { useEffect, useState } from "react"
 
 type Props = {
   search: string
@@ -9,6 +10,7 @@ type Props = {
 }
 
 function Search({ search, setSearch, loading }: Props) {
+  const [searchValue, setSearchValue] = useState(search)
   const searchBadges = [
     "Artikel 1",
     "Menschenwürde",
@@ -16,16 +18,24 @@ function Search({ search, setSearch, loading }: Props) {
     "Hautfarbe",
     "Drogen",
     "Freiheit",
-    "Krieg",
+    "Krieg"
   ]
+
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      setSearch(searchValue)
+    }, 500)
+
+    return () => clearTimeout(delayDebounceFn)
+  }, [searchValue, setSearch])
 
   return (
     <div className={styles.Search}>
       <div className={styles.inputWrapper}>
         <input
           className={styles.searchInput}
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
           type="text"
           placeholder="z.B. Menschenwürde"
         />
@@ -37,8 +47,11 @@ function Search({ search, setSearch, loading }: Props) {
           <SearchBadge
             key={text}
             text={text}
-            active={text === search}
-            onClick={() => setSearch(text)}
+            active={text === searchValue}
+            onClick={() => {
+              setSearchValue(text)
+              setSearch(text)
+            }}
           />
         ))}
       </div>
