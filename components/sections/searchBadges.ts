@@ -1,4 +1,4 @@
-export default [
+const searchBadges = [
   "frei",
   "entfalten",
   "gemobbt",
@@ -90,3 +90,5 @@ export default [
   "Fauna",
   "Respekt"
 ]
+
+export default searchBadges
