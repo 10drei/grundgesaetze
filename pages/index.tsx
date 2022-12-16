@@ -1,5 +1,5 @@
 import Head from "next/head"
-import styles from "../styles/Home.module.css"
+import styles from "../styles/Home.module.scss"
 import { Sentence, Paragraph, Phrase, Right } from "@prisma/client"
 import Header from "../components/Header"
 import { sentence, right } from "../lib/index"
@@ -22,14 +22,14 @@ export async function getStaticProps() {
   return {
     props: {
       sentences,
-      rights,
-    },
+      rights
+    }
   }
 }
 
 export default function Home({
   sentences,
-  rights,
+  rights
 }: {
   sentences: FullSentence[]
   rights: Right[]
@@ -41,7 +41,7 @@ export default function Home({
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    if (search.length > 3) {
+    if (search.length >= 3) {
       setLoading(true)
       fetch("/api/sentences/" + search)
         .then(async (res) => {
@@ -67,6 +67,8 @@ export default function Home({
           name="description"
           content="Ein Projekt von 10drei e.V. - Die Grundrechte unseres Grundgesetzes werden zu #grundgeSÄTZE - einfach für alle und online zugänglich🦒"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link rel="icon" href="/logo.jpg" />
       </Head>
 
@@ -78,7 +80,7 @@ export default function Home({
           </h1>
           <p className={styles.intro}>
             Im Rahmen des Demokratie-Projektes GrundgeSÄTZE haben über 500
-            Schülerinnen deutschlandweit unsere Grundrechte in eigenen Worten
+            SchülerInnen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
           <Search loading={loading} search={search} setSearch={setSearch} />

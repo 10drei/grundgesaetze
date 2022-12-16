@@ -2,7 +2,7 @@
 
 .inputWrapper {
     margin-top: 4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -36,6 +36,6 @@
     flex-wrap: wrap;
 }
 
-.searchBadges span + span {
-    margin-left: 1rem;
+.searchBadges span {
+    margin: 1rem 1.25rem 0 0;
 }

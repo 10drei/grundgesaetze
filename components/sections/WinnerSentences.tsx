@@ -1,4 +1,4 @@
-import styles from "./WinnerSentences.module.css"
+import styles from "./WinnerSentences.module.scss"
 import SentenceCard from "../SentenceCard"
 import { Right, Sentence } from "@prisma/client"
 
