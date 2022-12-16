@@ -9,6 +9,10 @@
     height: 100%;
 }
 
+.highlight {
+    color: var(--primary);
+}
+
 .header {
     font-size: 1rem;
     font-weight: 350;
