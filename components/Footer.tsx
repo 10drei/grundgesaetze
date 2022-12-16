@@ -1,4 +1,4 @@
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.scss"
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "../public/10drei_Logo_transparent.svg"
