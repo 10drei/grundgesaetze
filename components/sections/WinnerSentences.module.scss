@@ -23,8 +23,10 @@
 }
 
 .WinnerSentences .grid {
-    display: flex;
-    gap: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: fit-content(1fr);
+    gap: 2.5rem 2rem;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -32,10 +34,18 @@
 .WinnerSentences .grid div {
     margin-top: 2.5rem;
     max-width: 35rem;
+    width: 100%;
 }
 
 @media (max-width: 1220px) {
     .WinnerSentences .grid {
         justify-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .WinnerSentences .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
