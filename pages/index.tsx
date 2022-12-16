@@ -22,14 +22,14 @@ export async function getStaticProps() {
   return {
     props: {
       sentences,
-      rights,
-    },
+      rights
+    }
   }
 }
 
 export default function Home({
   sentences,
-  rights,
+  rights
 }: {
   sentences: FullSentence[]
   rights: Right[]
@@ -80,7 +80,7 @@ export default function Home({
           </h1>
           <p className={styles.intro}>
             Im Rahmen des Demokratie-Projektes GrundgeSÄTZE haben über 500
-            Schülerinnen deutschlandweit unsere Grundrechte in eigenen Worten
+            SchülerInnen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
           <Search loading={loading} search={search} setSearch={setSearch} />
