@@ -27,7 +27,7 @@ function Search({ search, setSearch, loading }: Props) {
     }, 500)
 
     return () => clearTimeout(delayDebounceFn)
-  }, [searchValue])
+  }, [searchValue, setSearch])
 
   return (
     <div className={styles.Search}>
