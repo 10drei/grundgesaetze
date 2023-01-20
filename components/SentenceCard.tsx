@@ -1,12 +1,20 @@
 import styles from "./SentenceCard.module.scss"
+import prizeIcon from "../public/prize-750.png"
+import Image from "next/image"
 
 type Props = {
   articlePath: string
   sentenceText: string
   rightText: string
+  isWinner?: boolean
 }
 
-function Card({ articlePath, sentenceText, rightText }: Props) {
+function Card({
+  articlePath,
+  sentenceText,
+  rightText,
+  isWinner = false
+}: Props) {
   let regex = new RegExp("__([^_]+)__", "g")
 
   const matches = sentenceText.matchAll(regex)
@@ -19,13 +27,21 @@ function Card({ articlePath, sentenceText, rightText }: Props) {
 
   return (
     <div key={sentenceText} className={styles.SentenceCard}>
+      {isWinner && (
+        <Image
+          className={styles.prizeIcon}
+          src={prizeIcon}
+          alt={"Gewinnersatz"}
+          width={250}
+        />
+      )}
       <p className={styles.header}>
         {articlePath} | {rightText}
       </p>
       <p
         className={styles.content}
         dangerouslySetInnerHTML={{
-          __html: sentenceText,
+          __html: sentenceText
         }}
       ></p>
     </div>
