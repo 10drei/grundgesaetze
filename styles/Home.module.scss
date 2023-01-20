@@ -63,13 +63,9 @@
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
-    gap: 0.5rem 2.5rem;
+    gap: 2rem 2.5rem;
     max-width: 1200px;
     margin: 4rem auto 0 auto;
-}
-
-.searchedSentences div {
-    margin-bottom: 2.5rem;
 }
 
 .searchBadges {
