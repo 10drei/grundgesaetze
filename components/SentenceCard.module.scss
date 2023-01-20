@@ -21,6 +21,8 @@
     opacity: 0.4;
     right: -100px;
     top: -75px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .header {
