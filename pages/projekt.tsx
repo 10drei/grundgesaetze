@@ -11,10 +11,12 @@ function Projekt() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>GrundgeSÄTZE | Startseite</title>
+        <title>GrundgeSÄTZE | Über das Projekt</title>
         <meta
           name="description"
-          content="Ein Projekt von 10drei e.V. - Die Grundrechte unseres Grundgesetzes werden zu #grundgeSÄTZE - einfach für alle und online zugänglich🦒"
+          content="Rechte verstehen, Zukunft gestalten. Dies ist das Motto unseres Projekts, das sich darauf konzentriert,
+            das Verständnis für die grundlegenden Rechte im deutschen
+            Grundgesetz bei Schülern und Jugendlichen zu fördern."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
