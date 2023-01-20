@@ -118,7 +118,7 @@ export default function Home({
 
       <WinnerSentences sentences={sentences} rights={rights} />
 
-      <Footer />
+      <Footer mode="dark" />
     </div>
   )
 }

@@ -1,88 +1,101 @@
 .Footer {
-    background: var(--background);
-    padding: 3rem 0;
-    color: white;
-    overflow: hidden;
-    position: relative;
-    margin-top: 10rem;
+  // background: var(--background);
+  padding: 3rem 0;
+  overflow: hidden;
+  position: relative;
+  //   margin-top: 10rem;
+}
+
+.Footer.light {
+  color: #1e1e1e;
+  background: white;
+}
+
+.Footer.dark {
+  background: var(--background);
+  color: white;
+}
+
+.Footer.dark .image {
+  opacity: 0.2;
 }
 
 .Footer .image {
-    position: absolute;
-    left: -5rem;
-    bottom: -2rem;
-    transform: scale(1.1);
+  position: absolute;
+  left: -7rem;
+  bottom: -5rem;
+  transform: scale(0.9);
 }
 
 .Footer .footerContent {
-    max-width: 70%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr fit-content(1fr);
-    padding: 0 2rem;
-    gap: 2rem 4rem;
-    font-size: 1.125rem;
+  max-width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr fit-content(1fr);
+  padding: 0 2rem;
+  gap: 2rem 4rem;
+  font-size: 1.125rem;
 }
 
 .footerContent > div h3 {
-    margin-bottom: 1rem;
-    font-weight: 600;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .aboutProject {
-    grid-column: 2;
+  grid-column: 2;
 }
 
 .contactInformation a {
-    display: inline-block;
-    margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .links {
-    grid-column: 2;
-    grid-row: 2;
-    margin-top: auto;
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: auto;
 }
 
 .links > a:first-child {
-    margin-right: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 @media (max-width: 1200px) {
-    .Footer .footerContent {
-        max-width: 90%;
-    }
+  .Footer .footerContent {
+    max-width: 90%;
+  }
 
-    .Footer .image {
-        display: none;
-    }
+  .Footer .image {
+    display: none;
+  }
 }
 
 @media (max-width: 1000px) {
-    .Footer .footerContent {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr fit-content(1fr);
-        gap: 2rem 0;
-    }
+  .Footer .footerContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr fit-content(1fr);
+    gap: 2rem 0;
+  }
 
-    .aboutProject {
-        grid-column: 1;
-        grid-row: 2;
-    }
+  .aboutProject {
+    grid-column: 1;
+    grid-row: 2;
+  }
 
-    .contactInformation {
-        grid-column: 1;
-        grid-row: 3;
-    }
+  .contactInformation {
+    grid-column: 1;
+    grid-row: 3;
+  }
 
-    .links {
-        grid-column: 1;
-        grid-row: 4;
-    }
+  .links {
+    grid-column: 1;
+    grid-row: 4;
+  }
 
-    .about {
-        grid-column: 1;
-        grid-row: 1;
-    }
+  .about {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }

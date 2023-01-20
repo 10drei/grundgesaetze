@@ -11,7 +11,7 @@ function Header() {
       <Link className={styles.link} href={"/"}>
         Startseite
       </Link>
-      <Link className={styles.link} href="https://10drei.org">
+      <Link className={styles.link} href="/projekt">
         Über das Projekt
       </Link>
       <Link href="https://www.instagram.com/grundgesaetze/" target="_blank">
