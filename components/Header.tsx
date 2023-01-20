@@ -8,6 +8,9 @@ import instagram from "../public/instagram.svg"
 function Header() {
   return (
     <div className={styles.Header}>
+      <Link className={styles.link} href={"/"}>
+        Startseite
+      </Link>
       <Link className={styles.link} href="/projekt">
         Über das Projekt
       </Link>

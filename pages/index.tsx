@@ -103,6 +103,7 @@ export default function Home({
                       rightText={
                         rights.find((r) => r.id === sentence.rightId)?.text!
                       }
+                      isWinner={sentence.isWinner}
                     />
                   </motion.div>
                 ))

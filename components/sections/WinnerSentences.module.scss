@@ -30,12 +30,17 @@
   gap: 2.5rem 2rem;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .WinnerSentences .grid div {
   margin-top: 2.5rem;
   max-width: 35rem;
   width: 100%;
+}
+
+.WinnerSentences .grid div:nth-child(even) {
+    transform: translateY(40px);
 }
 
 @media (max-width: 1220px) {
@@ -48,5 +53,9 @@
   .WinnerSentences .grid {
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+
+  .WinnerSentences .grid div:nth-child(even) {
+    transform: translateY(0);
   }
 }
