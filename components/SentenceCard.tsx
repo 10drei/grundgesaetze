@@ -1,5 +1,5 @@
 import styles from "./SentenceCard.module.scss"
-import prizeIcon from "../public/prize-750.png"
+import prizeIcon from "../public/prize-375.png"
 import Image from "next/image"
 
 type Props = {
