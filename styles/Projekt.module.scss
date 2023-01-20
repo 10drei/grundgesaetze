@@ -1,0 +1,72 @@
+.Hero {
+  background: var(--background);
+  min-height: 500px;
+  padding-bottom: 10rem;
+}
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.title {
+  margin-top: 4rem;
+  color: white;
+  font-size: 3.75rem;
+  margin-bottom: 2rem;
+}
+
+.title span {
+  color: var(--primary);
+}
+
+.text {
+  color: #e8e8e8;
+  font-size: 1.5rem;
+}
+
+.imageWrapper {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 5.5rem;
+
+  img {
+    position: relative;
+  }
+
+  .image1 {
+    z-index: 1;
+    outline: 20px solid var(--background);
+  }
+
+  .image2 {
+    position: absolute;
+    top: 4rem;
+    left: 30rem;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .searchedSentences {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    & > div {
+      width: 100%;
+    }
+
+    & > div > div {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+}

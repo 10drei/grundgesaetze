@@ -1,11 +1,16 @@
 import styles from "./Footer.module.scss"
 import Link from "next/link"
 import Image from "next/image"
-import Logo from "../public/10drei_Logo_transparent.svg"
+import Logo from "../public/10drei_Logo.svg"
+import classNames from "classnames"
 
-function Footer() {
+type Props = {
+  mode: "light" | "dark"
+}
+
+function Footer({ mode }: Props) {
   return (
-    <div className={styles.Footer}>
+    <div className={classNames(styles.Footer, styles[mode])}>
       <Image className={styles.image} src={Logo} alt="Logo" />
       <div className={styles.footerContent}>
         <div className={styles.about}>
