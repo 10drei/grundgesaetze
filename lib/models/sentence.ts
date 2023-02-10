@@ -26,3 +26,12 @@ export async function search(query: string) {
     return e
   }
 }
+
+
+export async function getById(sentenceId: string) {
+  return await db.sentence.findUnique({
+    where: {
+      id: sentenceId
+    },
+  })
+}
