@@ -4,8 +4,8 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Head from "next/head"
 import Image from "next/image"
-import image01 from "../public/img01.png"
-import image02 from "../public/img02.png"
+import project1 from "../public/project1.jpg"
+import project2 from "../public/project2.jpg"
 
 function Projekt() {
   return (
@@ -45,8 +45,12 @@ function Projekt() {
           </p>
 
           <div className={styles.imageWrapper}>
-            <Image className={styles.image1} src={image01} alt="Präsentation" />
-            <Image className={styles.image2} src={image02} alt="Klassenraum" />
+            <Image
+              className={styles.image1}
+              src={project1}
+              alt="Präsentation"
+            />
+            <Image className={styles.image2} src={project2} alt="Klassenraum" />
           </div>
           <h2 className={styles.title2}>Die Entstehung</h2>
           <p className={styles.text}>
