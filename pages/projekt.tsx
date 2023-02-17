@@ -29,11 +29,12 @@ function Projekt() {
             <span>Rechte</span> verstehen, <span>Zukunft</span> gestalten
           </h1>
           <p className={styles.text}>
-            Im Rahmen des Demokratie-Projektes GrundgeSÄTZE haben über 500
+            Im Rahmen des Demokratieprojektes GrundgeSÄTZE (GGS) haben über 500
             Schüler*innen deutschlandweit unsere Grundrechte in eigenen Worten
-            formuliert. Auf dieser Website sind die Sätze zu sehen, die in einem
-            Online-Voting der Jugendlichen die meisten Stimmen erhielten und von
-            einer Jury aus Expert*innen geprüft wurden.
+            formuliert. Auf dieser Website sind zum einen die Sätze zu sehen,
+            die in einem Online-Voting der Jugendlichen die meisten Stimmen
+            erhielten und von einer Jury aus Expert*innen geprüft wurden, und
+            zum anderen alle Sätze, die bisher in dem Projekt entstanden sind.
             <br /> <br />
             Die Herausforderung: In unserer Verfassung stecken unglaublich viele
             wertvolle Aussagen für den Alltag, allerdings ist das auf den ersten
@@ -83,8 +84,13 @@ function Projekt() {
           </p>
           <h2 className={styles.title2}>Die GGS-Jury</h2>
           <p className={styles.text}>
-            Mitglieder der Jury waren Prof. Dr. Sabine Anselm, Samira El
-            Ouassil, Elisabeth Niejahr, Johanna, Oliver Wurm, Schülersprecher
+            Mitglieder der Jury waren Prof. Dr. Sabine Anselm (Leiterin der
+            Forschungsstelle Werteerziehung und Lehrerbildung an der LMU
+            München), Johanna (Schülerin des Gymnasiums Holzkirchen), Elisabeth
+            Niejahr (Journalistin und Geschäftsführerin des Bereichs "Demokratie
+            stärken" der Gemeinnützigen Hertie-Stiftung), Lydia Rautenberg
+            (xxx), Samira El Ouassil (xxx), Oliver Wurm (Journalist und
+            Herausgeber des Grundgesetzes als Magazin), Schülersprecher?
           </p>
           <h2 className={styles.title2}>Und jetzt?</h2>
           <p className={styles.text}>
@@ -112,7 +118,7 @@ function Projekt() {
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-                className={styles.video1}
+                className={styles.iframe}
               ></iframe>
             </div>
             <br /> <br />
@@ -134,6 +140,25 @@ function Projekt() {
               ein.
             </p>
           </div>
+
+          <div className={styles.videodiv2}>
+            <h2 className={styles.videoTitle}>
+              Hidden Movers Award 2022 <br></br>GrundgeSÄTZE
+            </h2>
+            <div className={styles.videoWrapper}>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/4QpWnNldR8Q"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className={styles.iframe}
+              ></iframe>
+            </div>
+            <br /> <br />
+          </div>
+          <div className={styles.filler}></div>
         </div>
       </div>
 

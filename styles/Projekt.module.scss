@@ -64,6 +64,17 @@
   left: 0;
 }
 
+.videodiv2 {
+  margin-top: 2rem;
+  background-image: url("/videobg.png");
+  background-size: contain;
+  background-position: top center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-bottom: 20rem;
+}
+
 .videoTitle {
   margin-top: 2rem;
   text-align: center;
@@ -80,13 +91,17 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.video1 {
+.iframe {
   border: 0;
-  display: block;
+}
+
+.filler {
+  margin-top: 30rem;
 }
 
 .verein {
   margin-top: 35rem;
+  margin-bottom: 2.5rem;
 }
 @media (max-width: 1200px) {
   .content {
