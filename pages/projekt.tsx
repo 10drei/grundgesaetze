@@ -104,16 +104,17 @@ function Projekt() {
             <h2 className={styles.videoTitle}>
               Erklärungsfilm: Das Grundgesetz
             </h2>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/TMtXKyWS784"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className={styles.video1}
-            ></iframe>
+            <div className={styles.videoWrapper}>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/TMtXKyWS784"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className={styles.video1}
+              ></iframe>
+            </div>
             <br /> <br />
           </div>
           <div className={styles.verein}>
