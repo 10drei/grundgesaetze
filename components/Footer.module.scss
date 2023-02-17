@@ -16,6 +16,16 @@
   color: white;
 }
 
+.Footer .image {
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.Footer.light .image {
+  opacity: 0.6;
+}
+
 .Footer.dark .image {
   opacity: 0.2;
 }
@@ -36,6 +46,9 @@
   padding: 0 2rem;
   gap: 2rem 4rem;
   font-size: 1.125rem;
+
+  z-index: 2;
+  position: relative;
 }
 
 .footerContent > div h3 {
