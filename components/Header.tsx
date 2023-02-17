@@ -11,12 +11,8 @@ function Header() {
       <Link className={styles.link} href={"/"}>
         Startseite
       </Link>
-      <Link
-        className={styles.link}
-        //href="/subpage?rightid='95018715-81ea-4bc6-aa40-4b255d9305d1'"
-        href="/subpage"
-      >
-        TEST
+      <Link className={styles.link} href="/subpage">
+        SubPage
       </Link>
       <Link className={styles.link} href="/projekt">
         Über das Projekt
