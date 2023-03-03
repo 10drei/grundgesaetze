@@ -98,6 +98,7 @@ export default function RightPage({ selectedRight }: PageProps) {
             .filter((r) => !r.isWinner)
             .map((sentence) => (
               <SentenceCard
+                key={sentence.id}
                 articlePath={selectedRight.articlePath}
                 sentenceText={sentence.text}
                 rightText={selectedRight.text}
