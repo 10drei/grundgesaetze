@@ -1,11 +1,14 @@
 import styles from "./SentenceCard.module.scss"
 import prizeIcon from "../public/ribbon.svg"
 import Image from "next/image"
+import { useRouter } from "next/router"
+import classNames from "classnames"
 
 type Props = {
   articlePath: string
   sentenceText: string
   rightText: string
+  rightNumber?: number
   isWinner?: boolean
 }
 
@@ -13,8 +16,10 @@ function Card({
   articlePath,
   sentenceText,
   rightText,
+  rightNumber,
   isWinner = false
 }: Props) {
+  const router = useRouter()
   let regex = new RegExp("__([^_]+)__", "g")
 
   const matches = sentenceText.matchAll(regex)
@@ -25,8 +30,20 @@ function Card({
     )
   }
 
+  const navigate = () => {
+    if (!rightNumber) return
+    router.push(`/recht/${rightNumber}`)
+  }
+
   return (
-    <div key={sentenceText} className={styles.SentenceCard}>
+    <div
+      key={sentenceText}
+      className={classNames(
+        styles.SentenceCard,
+        !!rightNumber && styles.clickable
+      )}
+      onClick={navigate}
+    >
       <p className={styles.header}>
         <span className={styles.text}>
           {articlePath} | {rightText}
