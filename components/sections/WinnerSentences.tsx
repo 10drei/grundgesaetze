@@ -20,6 +20,7 @@ function WinnerSentences({ sentences, rights }: Props) {
               articlePath={right?.articlePath ?? ""}
               sentenceText={sentence.text}
               rightText={right?.text ?? ""}
+              rightNumber={right?.rightNumber ?? 0}
             />
           )
         })}
