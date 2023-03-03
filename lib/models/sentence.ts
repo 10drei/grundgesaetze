@@ -7,22 +7,43 @@ export async function getAll() {
 export async function getWinners() {
   return await db.sentence.findMany({
     where: {
-      isWinner: true,
-    },
+      isWinner: true
+    }
   })
 }
 
 export async function search(query: string) {
   try {
     return await db.sentence.findMany({
-      take: 10,
+      take: 30,
       where: {
-        text: {
-          contains: query,
-        },
-      },
+        OR: [
+          {
+            text: {
+              contains: query
+            }
+          },
+          {
+            right: {
+              text: {
+                contains: query
+              }
+            }
+          },
+          {
+            right: {
+              articlePath: {
+                contains:
+                  query.toLowerCase().replaceAll("artikel", "art").trimEnd() +
+                  " "
+              }
+            }
+          }
+        ]
+      }
     })
   } catch (e) {
+    console.log("Fehler geschmissen", e)
     return e
   }
 }
