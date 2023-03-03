@@ -137,15 +137,25 @@ function Projekt() {
             <h2 className={styles.title2}>Und jetzt?</h2>
             <p className={styles.text}>
               Das Plakat fürs Klassenzimmer kannst du unter{" "}
-              <a className={styles.link} href="/grundrechte_flyer.pdf">
+              <a
+                className={styles.link}
+                href="mailto:hallo@10drei.org?subject=Bestellung%20GGS-Plakat"
+              >
                 diesem Link
               </a>{" "}
               direkt und kostenlos bestellen. Die Workshops zum Projekt
               GrundgeSÄTZE können von Lehrer*innen und Referendar*innen mit
               unserem Toolkit weiterhin (natürlich ebenfalls kostenfrei)
-              eigenständig durchgeführt werden. Über dieses Formular kannst du
-              dich bei Interesse direkt dafür anmelden oder zusätzliche
-              Informationen anfordern.
+              eigenständig durchgeführt werden. Über{" "}
+              <a
+                className={styles.link}
+                href="https://forms.gle/npVDz7HGKXgLRpteA"
+              >
+                {" "}
+                dieses Formular
+              </a>{" "}
+              kannst du dich bei Interesse direkt dafür anmelden oder
+              zusätzliche Informationen anfordern.
               <br></br>
               Eine Übersicht zu allen Grundrechten findest du auf diesem Flyer,
               der auch als Unterrichtsmaterial kostenlos bei uns bestellt werden
