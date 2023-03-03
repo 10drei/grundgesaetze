@@ -38,11 +38,12 @@ function Projekt() {
             <br /> <br />
             Die Herausforderung: In unserer Verfassung stecken unglaublich viele
             wertvolle Aussagen für den Alltag, allerdings ist das auf den ersten
-            Blick oft nicht erkennbar. Das Grundgesetz ist ein komplizierter
-            Gesetzestext, der in der Schule oft theoretisch besprochen wird,
-            anstatt praktisch behandelt zu werden. In jedem der Grundrechte
-            stecken allerdings sehr viele ganz konkrete Werte und Aussagen für
-            unseren alltäglichen Umgang miteinander.
+            Blick oft nicht einfach erkennbar. Das Grundgesetz ist ein
+            komplizierter Gesetzestext, der in der Schule oft theoretisch
+            besprochen wird, anstatt praktisch behandelt zu werden. Dadurch
+            fehlt Schüler*innen der Zugang zu den konkreten Werten und Aussagen
+            für unseren alltäglichen Umgang miteinander, die in den Grundrechten
+            enthalten sind.
           </p>
 
           <div className={styles.imageWrapper}>
@@ -55,93 +56,67 @@ function Projekt() {
           </div>
           <h2 className={styles.title2}>Die Entstehung</h2>
           <p className={styles.text}>
-            Aus diesem Grund hat der Verein 10drei im Jahr 2020 das Projekt
-            “GrundgeSÄTZE - einfach für alle” initiiert. Hierfür wurden die
-            Grundrechte (Artikel 1 - 19 des Grundgesetzes) sowie der Artikel 20a
-            als Ausgangspunkt genommen. Schüler*innen aller Schulformen und von
-            der 7. bis zur 11. Klasse haben in acht verschiedenen Bundesländern
-            in Workshops diese Grundrechte frei und mit ihren eigenen Worten
-            formuliert. Anschließend wurden alle Sätze von 10drei gesammelt und
-            in einem Online-Voting den beteiligten Schulklassen und weiteren
+            Die Entstehung: Aus diesem Grund hat der Verein 10drei im Zeitraum
+            2020 - 2022 das Projekt “GrundgeSÄTZE - einfach für alle” initiiert.
+            Hierfür wurden die “klassischen” Grundrechte (Artikel 1 - 19) des
+            Grundgesetzes sowie der Artikel 20a als Ausgangspunkt genommen und
+            die zentralsten der darin enthaltenen Grundrechte aufbereitet. Bei
+            der Entscheidung, welche Grundrechte aufgenommen werden, orientierte
+            10drei sich vor allem am Kriterium der Lebensrelevanz für die
+            Schüler*innen. Schüler*innen aller Schulformen und von der 7. bis
+            zur 11. Klasse haben in acht verschiedenen Bundesländern jeweils
+            drei dieser Grundrechte frei und mit ihren eigenen Worten
+            formuliert. Anschließend wurden alle Sätze vom 10drei-Team gesammelt
+            und in einem Online-Voting den beteiligten Schulklassen und weiteren
             interessierten Schüler*innen zur Verfügung gestellt. Die dort
-            favorisierten Sätze wurden von einer Jury aus Expert*innen (die
-            Mitglieder sind unten aufgeführt) abschließend geprüft und
-            veröffentlicht. Im gesamten Prozess haben wir darauf geachtet, dass
-            keine Formulierungen oder Begriffe in den Sätzen der Schüler*innen
-            verändert werden. Sofern Korrekturen vorgenommen wurden, war das
-            lediglich bei Rechtschreibung, Grammatik oder unangemessenen
-            Bezeichnungen der Fall.
+            favorisierten Sätze pro Grundrecht wurden von einer Jury aus
+            Expert*innen (die Mitglieder sind unten aufgeführt) abschließend
+            geprüft und veröffentlicht. Im gesamten Prozess haben wir darauf
+            geachtet, dass die Formulierungen und Begriffe der Schüler*innen
+            möglichst unverändert blieben. Sofern Korrekturen vorgenommen
+            wurden, war das lediglich bei Rechtschreibung, gendergerechter
+            Sprache, Grammatik oder unangemessenen Bezeichnungen der Fall.
           </p>
           <h2 className={styles.title2}>Das Ergebnis</h2>
           <p className={styles.text}>
             Ein Plakat und diese Website, welche die von Schüler*innen
-            formulierten und von ihnen selbst ausgewählten Sätze zu den
+            formulierten und von ihnen selbst favorisierten Sätze zu den
             Grundrechten einfach verständlich abbilden. Die Grundrechte aus der
-            Perspektivedem Blick von Schüler*innen formuliert. Damit können
-            Plakat und Website natürlich auch ein Ausgangspunkt für Gespräche,
-            ein Einstieg ins Thema Demokratie & Grundgesetz oder der Anfang für
-            neue Projekte sein.
+            Perspektive von Schüler*innen formuliert. Damit können Plakat und
+            Website ein Ausgangspunkt für Gespräche, ein Einstieg ins Thema
+            Demokratie & Grundgesetz oder der Anfang für neue Projekte sein.
           </p>
-          <h2 className={styles.title2}>Die GGS-Jury</h2>
+          <h2 className={styles.title2}>Der Verein 10drei</h2>
           <p className={styles.text}>
-            Mitglieder der Jury waren Prof. Dr. Sabine Anselm (Leiterin der
-            Forschungsstelle Werteerziehung und Lehrerbildung an der LMU
-            München), Johanna (Schülerin des Gymnasiums Holzkirchen), Elisabeth
-            Niejahr (Journalistin und Geschäftsführerin des Bereichs "Demokratie
-            stärken" der Gemeinnützigen Hertie-Stiftung), Lydia Rautenberg
-            (xxx), Samira El Ouassil (xxx), Oliver Wurm (Journalist und
-            Herausgeber des Grundgesetzes als Magazin), Schülersprecher?
+            Als gemeinnütziger Verein entwickeln wir innovative und
+            wirkungsvolle Bildungsformate, um demokratische Grundwertebildung
+            gemeinsam mit Schüler*innen und Lehrer*innen umzusetzen. Ein Fokus
+            liegt dabei auf einfachen und skalierbaren Formaten, welche die
+            zentralen Aussagen des Grundgesetzes erlebbar machen. Unsere Vision
+            ist eine Gesellschaft, in der die im Grundgesetz enthaltenen Werte
+            wie Würde, Freiheit und Gleichheit, Grundlage der alltäglichen
+            Entscheidungsfindung sind. Dafür arbeiten wir mit Schüler*innen
+            aller Schulformen (6. Klasse bis Oberstufe), Referendar*innen sowie
+            Lehrkräften in ganz Deutschland zusammen und binden sie in die
+            Entwicklung und Erprobung unserer Angebote ein.
           </p>
-          <h2 className={styles.title2}>Und jetzt?</h2>
+          <h2 className={styles.title2}>Die Mitglieder der GGS-Jury</h2>
           <p className={styles.text}>
-            Das Plakat fürs Klassenzimmer kann unter diesem Link direkt und
-            kostenlos bestellt werden. Die Workshops zum Projekt GrundgeSÄTZE
-            können von Lehrer*innen und Referendar*innen mit unserem Toolkit
-            (natürlich ebenfalls kostenfrei) eigenständig durchgeführt werden.
-            Über dieses Formular können weitere Informationen angefordert
-            werden.
-            <br /> <br />
-            Eine Übersicht zu allen Grundrechten findest du auf diesem Flyer,
-            der auch als Unterrichtsmaterial bei uns bestellt werden kann. Mehr
-            Informationen zum Grundgesetz findest du übrigens in diesem Video.
+            Prof. Dr. Sabine Anselm (Leiterin Forschungsstelle Werteerziehung
+            und Lehrerbildung, LMU München)
+            <br></br>
+            Johanna (Schülerin, Gymnasium Holzkirchen)
+            <br></br>
+            Samira El Ouassil (Autorin und Kolumnistin)
+            <br></br>
+            Elisabeth Niejahr (Geschäftsführerin, Gemeinnützige Hertie-Stiftung)
+            <br></br>
+            Lydia Rautenberg (Verwaltungsrichterin)
+            <br></br>
+            Oliver Wurm (Publizist, Herausgeber Grundgesetz als Magazin)
             <br /> <br />
           </p>
           <div className={styles.videodiv}>
-            <h2 className={styles.videoTitle}>
-              Erklärungsfilm: Das Grundgesetz
-            </h2>
-            <div className={styles.videoWrapper}>
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/TMtXKyWS784"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className={styles.iframe}
-              ></iframe>
-            </div>
-            <br /> <br />
-          </div>
-          <div className={styles.verein}>
-            <h2 className={styles.title2}>Der Verein 10drei</h2>
-            <p className={styles.text}>
-              Als gemeinnütziger Verein entwickeln wir innovative und
-              wirkungsvolle Bildungsformate, um demokratische Grundwertebildung
-              gemeinsam mit Schüler*innen und Lehrer*innen umzusetzen. Ein Fokus
-              liegt dabei auf einfachen und skalierbaren Formaten, welche die
-              zentralen Aussagen des Grundgesetzes erlebbar machen. Unsere
-              Vision ist eine Gesellschaft, in der die im Grundgesetz
-              enthaltenen Werte wie Würde, Freiheit und Gleichheit, Grundlage
-              der alltäglichen Entscheidungsfindung sind. Dafür arbeiten wir mit
-              Schüler*innen aller Schulformen (6. Klasse bis Oberstufe),
-              Referendar*innen sowie Lehrkräften in ganz Deutschland zusammen
-              und binden sie in die Entwicklung und Erprobung unserer Angebote
-              ein.
-            </p>
-          </div>
-
-          <div className={styles.videodiv2}>
             <h2 className={styles.videoTitle}>
               Hidden Movers Award 2022 <br></br>GrundgeSÄTZE
             </h2>
@@ -150,6 +125,59 @@ function Projekt() {
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/4QpWnNldR8Q"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className={styles.iframe}
+              ></iframe>
+            </div>
+            <br /> <br />
+          </div>
+          <div className={styles.andNow}>
+            <h2 className={styles.title2}>Und jetzt?</h2>
+            <p className={styles.text}>
+              Das Plakat fürs Klassenzimmer kannst du unter{" "}
+              <a className={styles.link} href="/grundrechte_flyer.pdf">
+                diesem Link
+              </a>{" "}
+              direkt und kostenlos bestellen. Die Workshops zum Projekt
+              GrundgeSÄTZE können von Lehrer*innen und Referendar*innen mit
+              unserem Toolkit weiterhin (natürlich ebenfalls kostenfrei)
+              eigenständig durchgeführt werden. Über dieses Formular kannst du
+              dich bei Interesse direkt dafür anmelden oder zusätzliche
+              Informationen anfordern.
+              <br></br>
+              Eine Übersicht zu allen Grundrechten findest du auf diesem Flyer,
+              der auch als Unterrichtsmaterial kostenlos bei uns bestellt werden
+              kann. Einen kurzen Erklärfilm speziell für Schüler*innen zum
+              Grundgesetz findest du zudem{" "}
+              <a
+                className={styles.link}
+                href="https://www.youtube.com/watch?v=TMtXKyWS784"
+              >
+                hier
+              </a>
+              . Und einen Einblick in die Entstehung der GrundgeSÄTZE bekommst
+              du in{" "}
+              <a
+                className={styles.link}
+                href="https://www.youtube.com/watch?v=4QpWnNldR8Q"
+              >
+                diesem Video
+              </a>
+              .
+            </p>
+          </div>
+
+          <div className={styles.videodiv2}>
+            <h2 className={styles.videoTitle}>
+              Erklärungsfilm: Das Grundgesetz
+            </h2>
+            <div className={styles.videoWrapper}>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/TMtXKyWS784"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

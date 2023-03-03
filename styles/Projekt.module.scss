@@ -95,12 +95,16 @@
   border: 0;
 }
 
+.link {
+  color: var(--primary);
+}
+
 .filler {
   margin-top: 30rem;
 }
 
-.verein {
-  margin-top: 35rem;
+.andNow {
+  margin-top: 38rem;
   margin-bottom: 2.5rem;
 }
 @media (max-width: 1200px) {
