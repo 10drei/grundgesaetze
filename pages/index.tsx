@@ -45,8 +45,8 @@ export default function Home({
       setLoading(true)
       fetch("/api/sentences/" + search)
         .then(async (res) => {
-          const data = await res.json()
-          setSearchedSentences(data)
+          const data: FullSentence[] = await res.json()
+          setSearchedSentences(data.sort((a) => (a.isWinner ? -1 : 1)))
         })
         .catch((e) => {
           console.log("Error: ", e)

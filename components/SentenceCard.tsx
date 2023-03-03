@@ -1,5 +1,5 @@
 import styles from "./SentenceCard.module.scss"
-import prizeIcon from "../public/prize-375.png"
+import prizeIcon from "../public/ribbon.svg"
 import Image from "next/image"
 
 type Props = {
@@ -27,16 +27,18 @@ function Card({
 
   return (
     <div key={sentenceText} className={styles.SentenceCard}>
-      {isWinner && (
-        <Image
-          className={styles.prizeIcon}
-          src={prizeIcon}
-          alt={"Gewinnersatz"}
-          width={250}
-        />
-      )}
       <p className={styles.header}>
-        {articlePath} | {rightText}
+        <span className={styles.text}>
+          {articlePath} | {rightText}
+        </span>
+        {isWinner && (
+          <Image
+            className={styles.prizeIcon}
+            src={prizeIcon}
+            alt={"Gewinnersatz"}
+            width={20}
+          />
+        )}
       </p>
       <p
         className={styles.content}

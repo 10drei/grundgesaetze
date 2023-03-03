@@ -39,10 +39,6 @@
   width: 100%;
 }
 
-.WinnerSentences .grid div:nth-child(even) {
-    transform: translateY(40px);
-}
-
 @media (max-width: 1220px) {
   .WinnerSentences .grid {
     justify-content: center;
