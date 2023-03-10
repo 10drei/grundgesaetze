@@ -11,6 +11,10 @@
     height: 100%;
 }
 
+.SentenceCard:hover {
+    text-decoration: none;
+}
+
 .clickable {
     cursor: pointer;
 }
