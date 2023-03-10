@@ -3,6 +3,8 @@ import prizeIcon from "../public/ribbon.svg"
 import Image from "next/image"
 import { useRouter } from "next/router"
 import classNames from "classnames"
+import NextLink from "next/link"
+import React from "react"
 
 type Props = {
   articlePath: string
@@ -19,7 +21,6 @@ function Card({
   rightNumber,
   isWinner = false
 }: Props) {
-  const router = useRouter()
   let regex = new RegExp("__([^_]+)__", "g")
 
   const matches = sentenceText.matchAll(regex)
@@ -30,25 +31,54 @@ function Card({
     )
   }
 
-  const navigate = () => {
-    if (!rightNumber) return
-    router.push(`/recht/${rightNumber}`)
-  }
-
-  return (
+  return !rightNumber ? (
     <div
       key={sentenceText}
       className={classNames(
         styles.SentenceCard,
         !!rightNumber && styles.clickable
       )}
-      onClick={navigate}
     >
+      <CardContent
+        props={{
+          articlePath,
+          sentenceText,
+          rightText,
+          rightNumber,
+          isWinner
+        }}
+      />
+    </div>
+  ) : (
+    <NextLink
+      href={`/recht/${rightNumber}`}
+      key={sentenceText}
+      className={classNames(
+        styles.SentenceCard,
+        !!rightNumber && styles.clickable
+      )}
+    >
+      <CardContent
+        props={{
+          articlePath,
+          sentenceText,
+          rightText,
+          rightNumber,
+          isWinner
+        }}
+      />
+    </NextLink>
+  )
+}
+
+const CardContent: React.FC<{ props: Props }> = ({ props }) => {
+  return (
+    <>
       <p className={styles.header}>
         <span className={styles.text}>
-          {articlePath} | {rightText}
+          {props.articlePath} | {props.rightText}
         </span>
-        {isWinner && (
+        {props.isWinner && (
           <Image
             className={styles.prizeIcon}
             src={prizeIcon}
@@ -60,10 +90,10 @@ function Card({
       <p
         className={styles.content}
         dangerouslySetInnerHTML={{
-          __html: sentenceText
+          __html: props.sentenceText
         }}
       ></p>
-    </div>
+    </>
   )
 }
 

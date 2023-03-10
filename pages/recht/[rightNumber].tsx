@@ -89,9 +89,12 @@ export default function RightPage({ selectedRight }: PageProps) {
       <div className={styles.sentencesWrapper}>
         <h2>Alle Sätze zu diesem Recht</h2>
         <p className={styles.description}>
-          Schülerinnen und Schüler aus ganz Deutschland haben das Grundgesetz in
-          für sie verständliche Sätze umformuliert. Untenstehende Sätze wurden
-          für das Recht „{selectedRight.text}” eingereicht.
+          {selectedRight.sentences.length > 1
+            ? `Schülerinnen und Schüler aus ganz Deutschland haben das Grundgesetz in
+              "für sie verständliche Sätze umformuliert. Untenstehende Sätze wurden
+          für das Recht „${selectedRight.text}” eingereicht.`
+            : "Schülerinnen und Schüler aus ganz Deutschland haben das Grundgesetz in für sie verständliche Sätze umformuliert. " +
+              "Jedoch wurden neben dem Gewinnersatz keine weiteren Sätze zu diesem Recht eingereicht."}
         </p>
         <div className={styles.grid}>
           {selectedRight.sentences
