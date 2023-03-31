@@ -5,6 +5,7 @@ import { parseSentenceText, romanize } from "@/lib/utils/format"
 import SentenceCard from "../../components/SentenceCard"
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
+import Head from "next/head"
 import styles from "../../styles/RightPage.module.scss"
 import Image from "next/image"
 
@@ -60,6 +61,18 @@ export default function RightPage({ selectedRight }: PageProps) {
 
   return (
     <div>
+      <Head>
+        <title>GrundgeSÄTZE | Über das Projekt</title>
+        <meta
+          name="description"
+          content="Rechte verstehen, Zukunft gestalten. Dies ist das Motto unseres Projekts, das sich darauf konzentriert,
+            das Verständnis für die grundlegenden Rechte im deutschen
+            Grundgesetz bei Schülern und Jugendlichen zu fördern."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="icon" href="/logo.jpg" />
+      </Head>
       <div className={styles.Hero}>
         <div className={styles.content}>
           <Header />
