@@ -36,7 +36,7 @@ function Footer({ mode }: Props) {
 
         <div className={styles.contactInformation}>
           <Link href="mailto:hallo@10drei.org">hallo@10drei.org</Link>
-          <p>10drei e.V., c/o Eleven gGmbH | Praterinsel 4, 80538 München</p>
+          <p>10drei e.V. | Augustenstr. 27, RGB, 80333 München</p>
         </div>
 
         <div className={styles.links}>

@@ -80,7 +80,7 @@ export default function Home({
           </h1>
           <p className={styles.intro}>
             Im Rahmen des Demokratie-Projektes GrundgeSÄTZE haben über 500
-            SchülerInnen deutschlandweit unsere Grundrechte in eigenen Worten
+            Schüler*innen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
           <Search loading={loading} search={search} setSearch={setSearch} />
