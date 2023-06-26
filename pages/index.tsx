@@ -45,8 +45,8 @@ export default function Home({
       setLoading(true)
       fetch("/api/sentences/" + search)
         .then(async (res) => {
-          const data = await res.json()
-          setSearchedSentences(data)
+          const data: FullSentence[] = await res.json()
+          setSearchedSentences(data.sort((a) => (a.isWinner ? -1 : 1)))
         })
         .catch((e) => {
           console.log("Error: ", e)
@@ -80,32 +80,35 @@ export default function Home({
           </h1>
           <p className={styles.intro}>
             Im Rahmen des Demokratie-Projektes GrundgeSÄTZE haben über 500
-            SchülerInnen deutschlandweit unsere Grundrechte in eigenen Worten
+            Schüler*innen deutschlandweit unsere Grundrechte in eigenen Worten
             formuliert.
           </p>
           <Search loading={loading} search={search} setSearch={setSearch} />
 
           <div className={styles.searchedSentences} ref={searchedSentencesRef}>
             {searchedSentences.length > 0 && !loading
-              ? searchedSentences.map((sentence, index) => (
-                  <motion.div
-                    key={sentence.id}
-                    animate={{ opacity: 1, translateY: 0 }}
-                    initial={{ opacity: 0, translateY: 150 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                  >
-                    <SentenceCard
-                      articlePath={
-                        rights.find((r) => r.id === sentence.rightId)
-                          ?.articlePath!
-                      }
-                      sentenceText={sentence.text}
-                      rightText={
-                        rights.find((r) => r.id === sentence.rightId)?.text!
-                      }
-                    />
-                  </motion.div>
-                ))
+              ? searchedSentences.map((sentence, index) => {
+                  const currentSentence = rights.find(
+                    (r) => r.id === sentence.rightId
+                  )
+
+                  return (
+                    <motion.div
+                      key={sentence.id}
+                      animate={{ opacity: 1, translateY: 0 }}
+                      initial={{ opacity: 0, translateY: 150 }}
+                      transition={{ duration: 0.4, delay: index * 0.05 }}
+                    >
+                      <SentenceCard
+                        articlePath={currentSentence?.articlePath!}
+                        sentenceText={sentence.text}
+                        rightText={currentSentence?.text!}
+                        rightNumber={currentSentence?.rightNumber!}
+                        isWinner={sentence.isWinner}
+                      />
+                    </motion.div>
+                  )
+                })
               : loading && (
                   <div className={styles.loading}>
                     {/*<h3>Wird geladen...</h3>*/}
@@ -117,7 +120,7 @@ export default function Home({
 
       <WinnerSentences sentences={sentences} rights={rights} />
 
-      <Footer />
+      <Footer mode="dark" />
     </div>
   )
 }

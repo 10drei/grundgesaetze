@@ -1,0 +1,153 @@
+.Hero {
+  background: var(--background);
+  min-height: 500px;
+  padding-bottom: 10rem;
+}
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  height: 100%;
+  line-height: 200%;
+}
+
+.title {
+  margin-top: 4rem;
+  color: white;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  line-height: 130%;
+}
+.title2 {
+  margin-top: 4rem;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 120%;
+}
+
+.title span {
+  color: var(--primary);
+}
+
+.text {
+  color: #e8e8e8;
+  font-size: 1.25rem;
+}
+
+.imageWrapper {
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 8.5rem;
+
+  img {
+    position: relative;
+  }
+
+  .image1 {
+    z-index: 1;
+    outline: 20px solid var(--background);
+  }
+
+  .image2 {
+    position: absolute;
+    top: 4rem;
+    left: 30rem;
+    z-index: 0;
+  }
+}
+
+.videodiv {
+  margin-top: 2rem;
+  background-image: url("/videobg.png");
+  background-size: contain;
+  background-position: top center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.videodiv2 {
+  margin-top: 2rem;
+  background-image: url("/videobg.png");
+  background-size: contain;
+  background-position: top center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  margin-bottom: 20rem;
+}
+
+.videoTitle {
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.videoWrapper {
+  max-width: 560px;
+  width: 100%;
+  height: 315px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.iframe {
+  border: 0;
+}
+
+.link {
+  color: var(--primary);
+}
+
+.filler {
+  margin-top: 30rem;
+}
+
+.andNow {
+  margin-top: 38rem;
+  margin-bottom: 2.5rem;
+}
+@media (max-width: 1200px) {
+  .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1520px) {
+  .imageWrapper img {
+    width: 450px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .imageWrapper {
+    margin-bottom: 2.5rem;
+  }
+
+  .imageWrapper img {
+    width: 50%;
+  }
+
+  .imageWrapper .image2 {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .imageWrapper img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .videoWrapper {
+    width: 350px;
+    height: 197px;
+  }
+}

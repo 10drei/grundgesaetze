@@ -45,10 +45,11 @@ model PhraseRight {
 
 model Right {
   id          String        @id @default(uuid())
+  rightNumber Int          @unique
   text        String
   articlePath String        @default("")
-  Sentence    Sentence[]
-  PhraseRight PhraseRight[]
+  sentences    Sentence[]
+  phraseRights PhraseRight[]
 }
 
 model Sentence {

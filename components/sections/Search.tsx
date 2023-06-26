@@ -48,7 +48,7 @@ function Search({ search, setSearch, loading }: Props) {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           type="text"
-          placeholder="z.B. Menschenwürde"
+          placeholder="z.B. „Menschenwürde“ oder „Artikel 1“"
         />
         {loading && <Spinner className={styles.loader} />}
       </div>
